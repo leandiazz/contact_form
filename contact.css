@@ -1,0 +1,275 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fbfbfb;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul[class] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Poppins normal, medium, bold fonts */
+@font-face {
+  font-family: "Poppins";
+  src: url(./fonts/poppins-350.woff2) format("woff2"), url(./fonts/poppins-400.woff) format("woff"),
+    url(./fonts/poppins-400.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Poppins Semi";
+  src: url(./fonts/poppins-500.woff2) format("woff2"), url(./fonts/poppins-500.woff) format("woff"),
+    url(./fonts/poppins-500.ttf) format("truetype");
+  font-style: normal;
+  font-weight: medium;
+}
+@font-face {
+  font-family: "Poppins Bold";
+  src: url(./fonts/poppins-700.woff2) format("woff2"), url(./fonts/poppins-700.woff) format("woff"),
+    url(./fonts/poppins-700.ttf) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+/* Roboto normal font */
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/roboto-400.woff2) format("woff2"), url(./fonts/roboto-400.woff) format("woff"),
+    url(./fonts/roboto-400.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* CSS Variables */
+:root {
+  --clr-grey: #8d8d8d;
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --ff-roboto: "Roboto", sans-serif;
+
+  --ff-poppins: "Poppins", serif;
+  --ff-poppins-semi: "Poppins Semi", serif;
+  --ff-poppins-bold: "Poppins Bold", serif;
+}
+
+/* colors */
+.bg-dark {
+  background-color: var(--clr-black);
+}
+.bg-grey {
+  background-color: var(--clr-grey);
+}
+.bg-white {
+  background-color: var(--clr-white);
+}
+
+.text-dark {
+  color: var(--clr-black);
+}
+.text-grey {
+  color: var(--clr-grey);
+}
+.text-white {
+  color: var(--clr-white);
+}
+
+/* typography */
+.ff-roboto {
+  font-family: var(--ff-roboto);
+}
+.ff-poppins {
+  font-family: var(--ff-poppins);
+}
+.ff-poppins-md {
+  font-family: var(--ff-poppins-semi);
+}
+.ff-poppins-bold {
+  font-family: var(--ff-poppins-bold);
+}
+
+/* Logo */
+.logo {
+  cursor: pointer;
+}
+
+/* Desktop Navigation Bar */
+.navbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+
+  & .navbar_list {
+    display: flex;
+    gap: 3rem;
+    color: #1f1f1f;
+  }
+
+  & li:not([class]):hover {
+    cursor: pointer;
+    color: #000;
+    text-decoration: 2px solid underline black;
+    text-underline-position: under;
+    text-underline-offset: 6px;
+  }
+}
+
+.usericon,
+.carticon {
+  cursor: pointer;
+}
+
+header {
+  text-align: center;
+  margin-block: 2em;
+  & h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+main {
+  max-width: 1200px;
+  height: 670px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+
+aside {
+  width: 40%;
+  margin: 1em;
+  padding: 3em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact_data {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contact_data div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contact_title {
+  font-size: 1.75rem;
+}
+
+.form {
+  padding-top: 1rem;
+  margin: 3em;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form_data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
+}
+
+.form_data div {
+  display: flex;
+  flex-direction: column;
+  &:after {
+    content: "";
+    margin-top: 5px;
+    border-bottom: 2px solid #8d8d8d55;
+  }
+}
+
+.form_input {
+  all: unset;
+}
+
+.form_subject {
+  & div {
+    display: flex;
+    margin: 0.5rem auto;
+  }
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form_message {
+  display: flex;
+  flex-direction: column;
+  &:after {
+    content: "";
+    margin-top: 5px;
+    border-bottom: 2px solid #8d8d8d55;
+  }
+  & input {
+    all: unset;
+  }
+}
+
+.form_button {
+  width: 13em;
+  align-self: flex-end;
+}
+
+.social_media {
+  display: flex;
+  gap: 1rem;
+}
+.social_media li {
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  background-color: #1b1b1b;
+}
+
+/* TODO add media query at 1000px */
