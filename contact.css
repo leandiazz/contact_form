@@ -46,33 +46,38 @@ ul[class] {
   padding: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Poppins normal, medium, bold fonts */
 @font-face {
   font-family: "Poppins";
-  src: url(./fonts/poppins-350.woff2) format("woff2"), url(./fonts/poppins-400.woff) format("woff"),
-    url(./fonts/poppins-400.ttf) format("truetype");
+  src: url(./assets/fonts/poppins-350.woff2) format("woff2"), url(./assets/fonts/poppins-400.woff) format("woff"),
+    url(./assets/fonts/poppins-400.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Poppins Semi";
-  src: url(./fonts/poppins-500.woff2) format("woff2"), url(./fonts/poppins-500.woff) format("woff"),
-    url(./fonts/poppins-500.ttf) format("truetype");
+  src: url(./assets/fonts/poppins-500.woff2) format("woff2"), url(./assets/fonts/poppins-500.woff) format("woff"),
+    url(./assets/fonts/poppins-500.ttf) format("truetype");
   font-style: normal;
   font-weight: medium;
 }
 @font-face {
   font-family: "Poppins Bold";
-  src: url(./fonts/poppins-700.woff2) format("woff2"), url(./fonts/poppins-700.woff) format("woff"),
-    url(./fonts/poppins-700.ttf) format("truetype");
+  src: url(./assets/fonts/poppins-700.woff2) format("woff2"), url(./assets/fonts/poppins-700.woff) format("woff"),
+    url(./assets/fonts/poppins-700.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 /* Roboto normal font */
 @font-face {
   font-family: "Roboto";
-  src: url(./fonts/roboto-400.woff2) format("woff2"), url(./fonts/roboto-400.woff) format("woff"),
-    url(./fonts/roboto-400.ttf) format("truetype");
+  src: url(./assets/fonts/roboto-400.woff2) format("woff2"), url(./assets/fonts/roboto-400.woff) format("woff"),
+    url(./assets/fonts/roboto-400.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -177,9 +182,9 @@ main {
 }
 
 aside {
-  width: 40%;
+  width: 45%;
   margin: 1em;
-  padding: 3em;
+  padding: 2.5em;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -191,13 +196,21 @@ aside {
   flex-direction: column;
   gap: 3rem;
 }
+
 .contact_data div {
   display: flex;
   gap: 0.5rem;
+  & a:hover {
+    color: var(--clr-grey);
+  }
 }
 
-.contact_title {
+.contact_title h2 {
   font-size: 1.75rem;
+}
+
+.contact_title p {
+  font-size: 1.2rem;
 }
 
 .form {
@@ -221,7 +234,7 @@ aside {
   &:after {
     content: "";
     margin-top: 5px;
-    border-bottom: 2px solid #8d8d8d55;
+    border-bottom: 2px solid var(--clr-grey);
   }
 }
 
@@ -238,6 +251,12 @@ aside {
 
 input[type="checkbox"] {
   margin-right: 5px;
+  cursor: pointer;
+}
+
+.check label {
+  cursor: pointer;
+  user-select: none;
 }
 
 .form_message {
@@ -246,30 +265,63 @@ input[type="checkbox"] {
   &:after {
     content: "";
     margin-top: 5px;
-    border-bottom: 2px solid #8d8d8d55;
+    border-bottom: 2px solid var(--clr-grey);
   }
   & input {
     all: unset;
   }
 }
 
+.form_button_container {
+  display: flex;
+  justify-content: flex-end;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+  }
+}
+
 .form_button {
+  margin-bottom: 4.3rem;
   width: 13em;
-  align-self: flex-end;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  border: none;
+  padding: 1em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.letter_img {
+  position: absolute;
+  height: 180px;
+  margin-right: 6rem;
+  margin-top: 1.5rem;
 }
 
 .social_media {
   display: flex;
   gap: 1rem;
 }
+
 .social_media li {
+  cursor: pointer;
   border-radius: 50%;
   display: grid;
   place-content: center;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   color: #fff;
-  background-color: #1b1b1b;
+  background-color: #343434;
+
+  &:hover {
+    background-color: #fff;
+    color: #343434;
+  }
 }
 
 /* TODO add media query at 1000px */
