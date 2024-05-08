@@ -136,26 +136,27 @@ a {
 }
 
 /* Desktop Navigation Bar */
+.mobile_nav {
+  display: none;
+}
 .navbar {
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: space-between;
-
-  & .navbar_list {
-    display: flex;
-    gap: 3rem;
-    color: #1f1f1f;
-  }
-
-  & li:not([class]):hover {
-    cursor: pointer;
-    color: #000;
-    text-decoration: 2px solid underline black;
-    text-underline-position: under;
-    text-underline-offset: 6px;
-  }
+}
+.navbar_list {
+  display: flex;
+  gap: 3rem;
+  color: #1f1f1f;
+}
+.navbar_listli:not([class]):hover {
+  cursor: pointer;
+  color: #000;
+  text-decoration: 2px solid underline black;
+  text-underline-position: under;
+  text-underline-offset: 6px;
 }
 
 .usericon,
@@ -325,3 +326,63 @@ input[type="checkbox"] {
 }
 
 /* TODO add media query at 1000px */
+
+@media (width < 900px) {
+  main {
+    margin: 0.4rem;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  aside {
+    width: 95%;
+    align-items: center;
+    text-align: center;
+    gap: 3em;
+  }
+
+  .contact_data {
+    align-items: center;
+  }
+
+  .contact_data > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact_data div a {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .contact_title p {
+    font-size: 1em;
+  }
+
+  .form {
+    width: 90%;
+    padding-top: 0;
+    gap: 3em;
+  }
+  .form_data {
+    grid-template-columns: 1fr;
+  }
+
+  .form_subject > div {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .check {
+    margin-block: 5em;
+  }
+  .navbar_list {
+    display: none;
+  }
+  .mobile_nav {
+    display: block;
+  }
+}
