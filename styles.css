@@ -1,0 +1,238 @@
+/* VARIABLES CSS */
+
+:root {
+    --verde:#549E42;
+    --amarillo:#F3CA52;
+    --colorTextos:#3C3C3B;
+    --tamañoTitulos:font-size: 1.2em;
+    --tamañoTextosDescripcion: 0.9em;
+ }
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width:100vw;
+
+}
+header{
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+   
+}
+nav{
+    justify-content: flex-end;
+    width:80%
+}
+.logo{
+    padding-top: 5px;
+    width: 4%;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    text-decoration: none;
+    width: 94%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    justify-items: flex-end;
+    justify-content: space-between;
+    width: 40%;
+    text-decoration: none; 
+}
+ul li{
+   text-decoration: none;
+   list-style:none;
+   
+}
+li{
+    color: var(--colorTextos);
+}
+.logo-img{
+    width: 10%;
+}
+
+/* MAIN */ 
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* SLIDER */
+.slider-frame {
+	width: 100vw;
+    height: 400px;
+	margin:10px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+    position: relative;
+    background-position: center;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/* FIN SLIDER */
+
+/* PRODUCTS */
+.products{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    justify-items: center;
+}
+.card{
+    max-width: 25em;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 7px 5px -1px rgba(0,0,0,0.54);
+    -webkit-box-shadow: 1px 7px 5px -1px rgba(0,0,0,0.54);
+    -moz-box-shadow: 1px 7px 5px -1px rgba(0,0,0,0.54);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: .7px solid #3C3C3B;
+}
+.content-card{
+    flex-grow: 1;
+    display: flex;
+    min-height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+}
+.img-product{
+    width: 100%;
+    min-height: 200px;
+    border-radius: 10px 10px 0px 0px;
+    max-height: 20em;
+    object-fit: cover;
+    object-position: center top;
+    overflow: hidden;
+}
+.title-product{
+    padding-top: 1%;
+    justify-items: center;
+}
+.description{
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    flex-grow: 1;
+}
+.price{
+    padding-bottom: 5px;
+}
+.btn{
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--verde);
+    width: 100%;
+}
+
+/* FIN PRODUCTS */
+
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    margin-bottom: 0 auto;
+    background-color: var(--verde);
+    color: var(--colorTextos);
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.Copyright{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+}
+/* FIN FOOTER */
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+    
+    .products{
+   
+        padding-top: 5%;
+        padding-bottom: 5%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        justify-items: center;
+    }
+    .slider-frame {
+        width: 100vw;
+        height: auto;
+        margin:10px auto 0;
+        overflow: hidden;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0;
+        justify-items: flex-end;
+        justify-content: space-between;
+        width: 70%;
+        text-decoration: none; 
+    }
+  }
