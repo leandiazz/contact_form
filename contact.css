@@ -82,6 +82,73 @@ a {
   font-weight: normal;
 }
 
+/* CSS COMPARTIDOS CON INDEX.HTML*/
+/* VARIABLES CSS */
+
+:root {
+  --verde:#549E42;
+  --amarillo:#F3CA52;
+  --colorTextos:#3C3C3B;
+  --tamañoTitulos:font-size: 1.2em;
+  --tamañoTextosDescripcion: 0.9em;
+}
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width:100vw;
+
+}
+header{
+  width: 100%;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+ 
+}
+nav{
+  justify-content: flex-end;
+  width:80%
+}
+.logo{
+  padding-top: 5px;
+  width: 4%;
+}
+.menu{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  text-decoration: none;
+  width: 94%;
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 0;
+  justify-items: flex-end;
+  justify-content: space-between;
+  width: 40%;
+  text-decoration: none; 
+}
+ul li{
+ text-decoration: none;
+ list-style:none;
+ 
+}
+li{
+  color: var(--colorTextos);
+}
+.logo-img{
+  width: 10%;
+}
+/* CSS COMPARTIDOS CON INDEX.HTML */
 /* CSS Variables */
 :root {
   --clr-grey: #8d8d8d;
@@ -164,7 +231,7 @@ a {
   cursor: pointer;
 }
 
-header {
+.header-contact {
   text-align: center;
   margin-block: 2em;
   & h1 {
@@ -173,11 +240,13 @@ header {
   }
 }
 
+
 main {
   max-width: 1200px;
   height: 670px;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   border-radius: 12px;
   justify-content: space-between;
 }
