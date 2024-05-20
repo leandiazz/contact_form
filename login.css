@@ -1,0 +1,42 @@
+body{
+    align-items: center;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 40vw;
+}
+.form_login{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+input{
+    all: inherit;
+    border-bottom: 2px solid;
+}
+p{
+    margin-bottom: 15px;
+}
+button{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 13em;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border: none;
+    padding: 1em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    z-index: 1;
+}
